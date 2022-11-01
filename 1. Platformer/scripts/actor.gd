@@ -1,7 +1,9 @@
 extends KinematicBody2D
 class_name Actor
 
+export var grav: = 3000.0
+var velocity: = Vector2.ZERO
+
 func _physics_process(delta: float) -> void:
-	# executed every frame (30/60 times a sec)
-	var velocity: = Vector2 (300, 0)
+	velocity.y += grav * delta
 	move_and_slide (velocity)
