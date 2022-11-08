@@ -7,7 +7,7 @@
 extents = Vector2( 40, 44 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 45, 47.5 )
+extents = Vector2( 45, 44 )
 
 [node name="player" type="KinematicBody2D"]
 collision_mask = 10
@@ -25,6 +25,7 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -225 )
 current = true
+zoom = Vector2( 1.25, 1.25 )
 limit_left = 0
 limit_top = 0
 limit_smoothed = true
@@ -41,7 +42,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
-position = Vector2( 0, -40.5 )
+position = Vector2( 0, -44 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
