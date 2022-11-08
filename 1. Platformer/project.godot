@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="1. Platformer"
+run/main_scene="res://scenes/level.tscn"
 config/icon="res://assets/icon.png"
 
 [display]
@@ -74,4 +75,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
