@@ -18,4 +18,5 @@ func _physics_process(delta: float) -> void:
 		# change direction
 		_velocity.x *= -1.0
 	
-	_velocity.y = move_and_slide (_velocity, FLOOR_NORMAL).y
+	var snap: = Vector2.DOWN * 50
+	_velocity.y = move_and_slide_with_snap (_velocity, snap, FLOOR_NORMAL).y
