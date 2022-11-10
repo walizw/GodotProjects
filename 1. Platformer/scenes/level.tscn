@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/tileset.png" type="Texture" id=1]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://prefabs/bumper.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/objects/coin.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -136,11 +137,20 @@ position = Vector2( 2760, 591 )
 position = Vector2( 3028, 562 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 913, 587 )
+position = Vector2( 513, 611 )
 speed = Vector2( 800, 1400 )
 grav = 4000.0
 
 [node name="Camera2D" parent="player" index="2"]
 limit_right = 3360
+
+[node name="coin" parent="." instance=ExtResource( 6 )]
+position = Vector2( 882, 433 )
+
+[node name="coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1010, 428 )
+
+[node name="coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1136, 423 )
 
 [editable path="player"]
