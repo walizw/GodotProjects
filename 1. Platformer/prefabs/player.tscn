@@ -16,6 +16,7 @@ extents = Vector2( 49, 11 )
 collision_mask = 10
 script = ExtResource( 2 )
 grav = 500.0
+stomp_impulse = 1600.0
 
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 0, -48 )

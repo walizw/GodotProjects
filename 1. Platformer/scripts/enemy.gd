@@ -4,7 +4,7 @@ func _ready() -> void:
 	set_physics_process(false) # deactivate physics_process at the start
 	_velocity.x = -speed.x
 
-func _on_StompDetector_body_entered(body: Node) -> void:
+func _on_StompDetector_body_entered(body: KinematicBody2D) -> void:
 	if body.global_position.y > $StompDetector.global_position.y:
 		return
 	
