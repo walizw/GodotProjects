@@ -200,3 +200,5 @@ autoplay = "START"
 anims/RESET = SubResource( 2 )
 anims/START = SubResource( 3 )
 anims/fade_in = SubResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
