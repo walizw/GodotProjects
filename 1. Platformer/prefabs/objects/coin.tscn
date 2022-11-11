@@ -108,6 +108,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Coin"]
+show_behind_parent = true
 scale = Vector2( 1.1, 1.1 )
 occluder = SubResource( 5 )
 
