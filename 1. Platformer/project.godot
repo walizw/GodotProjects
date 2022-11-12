@@ -24,6 +24,10 @@ config/name="1. Platformer"
 run/main_scene="res://scenes/ui/TitleScreen.tscn"
 config/icon="res://assets/icon.png"
 
+[autoload]
+
+PlayerData="*res://prefabs/autoload/PlayerData.tscn"
+
 [display]
 
 window/size/width=1280
