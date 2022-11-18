@@ -9,12 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "ActionData",
+"language": "GDScript",
+"path": "res://scripts/ActionData.gd"
+}, {
+"base": "Node2D",
+"class": "ActiveTurnQueue",
+"language": "GDScript",
+"path": "res://scripts/ActiveTurnQueue.gd"
+}, {
 "base": "Node2D",
 "class": "Battler",
 "language": "GDScript",
 "path": "res://scripts/Battler.gd"
 } ]
 _global_script_class_icons={
+"ActionData": "",
+"ActiveTurnQueue": "",
 "Battler": ""
 }
 
