@@ -43,9 +43,21 @@ var _readiness: = 0.0 setget _set_readiness
 # Used to pause a battler from parent node
 var is_active: bool = true setget set_is_active
 
+func _ready () -> void:
+	# Connect to the stats' `health_depleted' signal to react to the health reacing 0
+	stats.connect ("health_depleted", self, "_on_BattlerStats_health_depleted")
+
 func _process (delta: float) -> void:
 	# Increments the readiness
 	self._readiness += stats.speed * delta + time_scale
+
+func _on_BattlerStats_health_depleted () -> void:
+	# We turn off processing for this battler
+	self.active = false
+	
+	# If it's an opponent, we mark it as unselectable
+	if not is_party_member:
+		self.selectable = false
 
 func set_is_selected (val: bool) -> void:
 	# Avoids us to select a battler if it isn't selectable
