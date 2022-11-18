@@ -33,7 +33,6 @@ _global_script_class_icons={
 [application]
 
 config/name="2. JRPG Combat"
-config/icon="res://icon.png"
 
 [gui]
 
