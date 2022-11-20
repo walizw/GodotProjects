@@ -26,6 +26,7 @@ func _process (delta: float) -> void:
 	
 	if half_beat > _last_half_beat:
 		_last_half_beat = half_beat
+		EventBus.emit_signal ("beat_incremented", {"half_beat": half_beat, "bps": _bps})
 
 func play_audio () -> void:
 	var time_delay: = AudioServer.get_time_to_next_mix () + AudioServer.get_output_latency ()
